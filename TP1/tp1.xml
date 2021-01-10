@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="tp1.xsl"?>
+
+<statistiques_equipe>
+<equipe>Chicago Bulls</equipe>
+<victoires>78</victoires>
+<defaites>2</defaites>
+<classement>1</classement>
+</statistiques_equipe>

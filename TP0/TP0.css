@@ -1,0 +1,19 @@
+
+parking { 
+     color: white; 
+     background-color : gray; 
+     width: 100%; 
+} 
+voiture { 
+     
+     font-size : 40px; 
+     background-color : powderblue; 
+} 
+personne { 
+    
+     font-size : 40px; 
+     background-color : powderblue; 
+} 
+ address, nom, tel, modele, marque, proprio,annee { 
+     display : block; 
+} 

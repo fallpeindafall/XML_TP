@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="./TP0.css" type="text/css"?>
+<parking
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="TP0.xsd">
+  <personne>
+    <codeP>Code personne : 001D</codeP>
+    <nom>Nom : peinda</nom>
+    <address>Adresse : Fass</address>
+    <tel>Télephone : 772901966</tel>
+  </personne>
+ 
+  <voiture>
+    <codeV>Code voiture : 45DF</codeV>
+    <proprio>Code propriétaire : 001D</proprio>
+    <marque>Marque : Toyota</marque>
+    <modele>Modèle : IDK</modele>
+    <annee>Annee : 2012</annee>
+  </voiture>
+</parking>

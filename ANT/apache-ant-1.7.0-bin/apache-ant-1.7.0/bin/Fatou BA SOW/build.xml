@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="projet" basedir="." default="init">
+
+
+    <target name="init" description="Create directories">
+        <mkdir dir="projet/bin"/>
+        <mkdir dir="projet/doc"/>
+        <mkdir dir="projet/arch"/>
+    </target>
+
+    <target name="clean" description="Delete">
+        <delete dir="projet/bin"/>
+   
+    </target>
+
+    <target name="compile" description="Compile">
+        <javac srcdir="projet/src" destdir="projet/bin"/>
+    </target>
+
+    <target name="archive" description="archives">
+        <jar destfile="projet/arch/archive.jar" basedir ="projet/bin"/>
+    </target>
+
+
+    
+    <target name="doc">
+    <javadoc packagenames="src" sourcepath="projet/src" destdir="projet/doc">
+       <fileset dir="projet/src">
+                <include name="**" />
+           </fileset>
+    </javadoc>
+  </target>
+
+
+    <target name="all" description="all">
+        <antcall target="init"/>
+        <antcall target="compile"/>
+        <antcall target="doc"/>
+        <antcall target="clean"/>
+        <antcall target="archive"/>
+    </target>  
+    <target name="main" description="main">
+	   
+    </target>
+
+</project>

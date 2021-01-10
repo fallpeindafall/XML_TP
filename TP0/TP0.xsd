@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2000/10/XMLSchema">
+	<xsd:element name="parking">
+		<xsd:element name="personne" type="xsd:string">
+			<xsd:key name="codeP">
+				<xsd:selector xpath="personne"/>
+				<xsd:field xpath="codeP"/>
+			</xsd:key>
+			<xsd:complexType>
+				<xsd:sequence>
+					<xsd:element name="nom" type="xsd:string"/>
+					<xsd:element name="adresse" type="xsd:string"/>
+					<xsd:element name="tel" type="xsd:string"/>
+				</xsd:sequence>	
+			</xsd:complexType>
+		</xsd:element>
+
+		<xsd:element name="voiture" type="xsd:string">
+			<xsd:key name="codeV">
+				<xsd:selector xpath="voiture"/>
+				<xsd:field xpath="codeV"/>
+			</xsd:key>
+			<xsd:complexType>
+				<xsd:sequence>
+					<xsd:element name="marque" type="xsd:string"/>
+					<xsd:element name="modele" type="xsd:string"/>
+					<xsd:element name="annee" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:element>	
+
+		<xsd:sequence>
+			<xsd:keyref name="proprio" refer="codeP">
+				<xsd:selector xpath="personne"/>
+				<xsd:field xpath="codeP"/>
+			</xsd:keyref>
+		</xsd:sequence>
+	</xsd:element>
+</xsd:schema>
